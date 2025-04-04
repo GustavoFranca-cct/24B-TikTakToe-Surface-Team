@@ -14,3 +14,27 @@ sub2.addEventListener("click", (event) => {
     let playerName2 = player2.value;
     console.log("Player 2: " + playerName2);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cells = document.querySelectorAll("td");
+    const currentPlayerText = document.getElementById("currentPlayer");
+    let currentPlayer = "X"; // Player 1 starts
+  
+    cells.forEach(function (cell) {
+      cell.addEventListener("click", function () {
+        if (cell.textContent !== "X" && cell.textContent !== "O") {
+          cell.textContent = currentPlayer;
+  
+          // Switch player
+          if (currentPlayer === "X") {
+            currentPlayer = "O";
+            currentPlayerText.textContent = "Player 2's Turn (O)";
+          } else {
+            currentPlayer = "X";
+            currentPlayerText.textContent = "Player 1's Turn (X)";
+          }
+        }
+      });
+    });
+  });
+  

@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tik Tak Toe Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Tik Tak Toe Game</title>
 </head>
 <body>
-    <label for="player1Input">Enter name for player: <span id="player-name1-label">1</span></label>
-    <input type="text" name="player-name1" id="player1Input" placeholder="Enter Player 1">
-    <button id="submit1">Submit</button>
+  <h2>Tic Tac Toe</h2>
 
-    <label for="player2Input">Enter name for player: <span id="player-name2-label">2</span></label>
-    <input type="text" name="player-name2" id="player2Input" placeholder="Enter Player 2">
-    <button id="submit2">Submit</button>
+  <!-- Player name input -->
+  <div>
+    <label>Player 1 Name:</label>
+    <input type="text" id="player1Input" placeholder="Enter Player 1">
+    <br>
+    <label>Player 2 Name:</label>
+    <input type="text" id="player2Input" placeholder="Enter Player 2">
+    <br><br>
+    <button id="startBtn">Start Game</button>
+  </div>
 
-    <!-- Board/grid -->
-    <table>
-        <tr>
-            <td id="r0c0">1</td>
-            <td id="r0c1">2</td>
-            <td id="r0c2">3</td>
-        </tr>
-        <tr>
-            <td id="r1c0">4</td>
-            <td id="r1c1">5</td>
-            <td id="r1c2">6</td>
-        </tr>
-        <tr>
-            <td id="r2c0">7</td>
-            <td id="r2c1">8</td>
-            <td id="r2c2">9</td>
-        </tr>
-    </table>
+  <!-- Game Board -->
+  <table id="gameBoard">
+    <tr>
+      <td id="r0c0">1</td>
+      <td id="r0c1">2</td>
+      <td id="r0c2">3</td>
+    </tr>
+    <tr>
+      <td id="r1c0">4</td>
+      <td id="r1c1">5</td>
+      <td id="r1c2">6</td>
+    </tr>
+    <tr>
+      <td id="r2c0">7</td>
+      <td id="r2c1">8</td>
+      <td id="r2c2">9</td>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
